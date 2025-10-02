@@ -79,9 +79,17 @@ class ListaEcadeada{
         }
         return valor;
     }
+    //(d) AlterarNo - Recebe como argumento um nó e dois interios para alterar as informações
+    //do nó referenciado
+    public void AlterarNo(int no, int novoValor){
+        No atual = cabeca;
+        if (cabeca == null) System.out.println("Lista vazia!");
 
-    public void ALterarNo(){
+        while (atual != null){
+            if (atual.valor == no) atual.valor = novoValor;
+            atual = atual.proximo;
 
+        }
     }
 
 }
