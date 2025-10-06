@@ -19,20 +19,7 @@ class ListaEcadeada{
             atual.proximo = novo; // quando o atual.próximo for NULL, o atual recebe o valor.
         }
     }
-    public void tamanho(){
-        int count = 0;
-        if (cabeca == null){
-            System.out.println("Lista vazia!");
-        }
-        else{
-            No atual = cabeca;
-            while (atual != null){
-                atual = atual.proximo;
-                count++;
-            }
-            System.out.println("Tamanho da lista: " + count);
-        }
-    }
+
     public void exibir(){
         No atual = cabeca;
         while(atual != null){
@@ -88,8 +75,38 @@ class ListaEcadeada{
         while (atual != null){
             if (atual.valor == no) atual.valor = novoValor;
             atual = atual.proximo;
-
         }
+    }
+
+    //(e) Tamanho - Retorna o tamanho da lista
+    public void tamanho(){
+        int count = 0;
+        if (cabeca == null){
+            System.out.println("Lista vazia!");
+        }
+        else{
+            No atual = cabeca;
+            while (atual != null){
+                atual = atual.proximo;
+                count++;
+            }
+            System.out.println("Tamanho da lista: " + count);
+        }
+    }
+
+    //(f) Existe - Retorna se um n ́o existe na lista
+    public boolean existe(int no){
+        No atual = cabeca;
+        boolean isHere = false;
+        while(atual != null){
+            if (atual.valor == no){
+                isHere = true;
+                break;
+            }
+            atual = atual.proximo;
+        }
+
+        return isHere;
     }
 
 }
