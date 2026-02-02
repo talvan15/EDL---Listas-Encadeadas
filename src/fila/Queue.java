@@ -1,4 +1,4 @@
-package estrutura_de_dados;
+package fila;
 
 public class Queue {
     private int frente, fim, capacidade;
