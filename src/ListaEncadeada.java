@@ -109,4 +109,7 @@ class ListaEcadeada{
         return isHere;
     }
 
+    public int retornarValorNo(No no){
+        return no.valor;
+    }
 }
