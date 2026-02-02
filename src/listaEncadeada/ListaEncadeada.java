@@ -1,3 +1,4 @@
+package listaEncadeada;
 class ListaEcadeada{
     No cabeca;
 
